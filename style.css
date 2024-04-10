@@ -1,14 +1,18 @@
 :root{
    --var-color-background: #F5F5F5;
    --var-color-link: #000;
+   --var-color-highlight: purple;
+   --var-color-title: #555555;
+   --var-color-subsection: #6a6a6a;
+   
 }
 
 body {
     box-sizing: border-box;
     background-color: var(--var-color-background);
-    font-family: 'Poppins';
+    font-family: 'Poppins', 'Arial';
     margin: 0;
-    padding: 0;
+    padding: 1rem;
     line-height: 1;
 }
 ol, ul,li {
@@ -19,18 +23,6 @@ a{
     color: var(--cor-de-link);
 }
 
-/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
-
-Lo que es el BEM?
-
-BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
-desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
-independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
-con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
-
-Enlace de la documentación oficial!
-https://en.bem.info/methodology/quick-start/
-
 /*Sección Menu*/
 
 section.menu{
@@ -38,52 +30,112 @@ section.menu{
     justify-content: space-between;
 }
 
+.menu__header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu__header--image{
+    height: 24px;
+}
+
+.menu__title{
+    color: var(--var-color-highlight)
+}
+
+.menu__nav{
+    display: flex;
+    align-items: center;
+}
+
 .menu__list{
     display: none;
 }
 
+.menu__list__item__contato{
+    font-style: normal;
+    font-weight: 300;
+}
 
 /*Sección Title*/
 
 section.title{
+    display: flex;
+    padding: 1rem;
+}
 
+.title__div{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.title__profile{
+    height: 98px;
+    width: 98px;
+}
+
+.title__bio{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--var-color-title);
+}
+
+.title__bio--nombre{
+    color: var(--var-color-highlight);
+}
+
+.title__subsection{
+    font-style: normal;
+    font-weight: 300;
+}
+
+.title__network{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
 }
 
 /*Sección About*/
 
 section.about{
-
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1rem;
 }
 
 /*Sección Hobbies*/
 
-section.hobbies{
+/* section.hobbies{
     
-}
+} */
 
 /* Experiencia Académica*/
 
-section.academic{
+/* section.academic{
 
-}
+} */
 
 /* experiencia*/
 
-section.experience{
+/* section.experience{
 
-}
+} */
 
 /*Contacto*/
 
-section.formcontato{
+/* section.formcontato{
 
-}
+} */
 
 /*footeer*/
 
-section.footer{
+/* section.footer{
    
-}
+} */
 
 /* Vamos a desafiarnos trabajando con responsividad?
 Utiliza las referencias de los breakpoints @media abajo */
