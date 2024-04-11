@@ -288,7 +288,6 @@ section.experience{
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    gap: 4rem;
 }
 
 .experience__section__title{
@@ -298,6 +297,12 @@ section.experience{
     align-self: center;
 }
 
+.experience__cards{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 4rem;
+}
+
 .experience__box{
     display: flex;
     flex-direction: column;
@@ -305,7 +310,7 @@ section.experience{
 }
 
 .experience__img{
-
+    flex-shrink: 1;
 }
 
 .experience__info{
