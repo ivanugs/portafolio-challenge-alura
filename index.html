@@ -188,7 +188,6 @@
         <section class="experience" id="xp">
             <h2 class="experience__section__title" >Experiencia Profesional</h2>
             <div class="experience__cards">
-
                 <div class="experience__box">
                     <img class="experience__img" src="assets\herbario.png">
                     <div class="experience__info">
@@ -225,24 +224,28 @@
                     <h2 class="formcontato__title">Contacto</h2>
                     <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
                     <h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible. </h3>
-                    <form class="formcontato__form" name="form">
+                    <form class="formcontato__form" name="form" onsubmit="return validateForm()">
                         <div class="formcontato__input__group">
-                            <input type="input" class="formcontato__input__field" placeholder="Nombre" name="name" id='name' required/>
+                            <input type="input" class="formcontato__input__field" placeholder="Nombre" name="name" id='name'/>
                             <label for="name" class="formcontato__input__label">Nombre</label>
+                            <span id="nombre-error" class="error-message"></span><br>
                         </div>
                         <div class="formcontato__input__group">
-                            <input type="email" class="formcontato__input__field" placeholder="Email" name="email" id='email' required>
+                            <input type="email" class="formcontato__input__field" placeholder="Email" name="email" id='email' >
                             <label for="email" class="formcontato__input__label">Email</label>
+                            <span id="email-error" class="error-message"></span><br>
                         </div>
                         <div class="formcontato__input__group">
-                            <input type="text" class="formcontato__input__field" placeholder="Asunto" name="asunto" id='asunto' required>
+                            <input type="text" class="formcontato__input__field" placeholder="Asunto" name="asunto" id='asunto' >
                             <label for="asunto" class="formcontato__input__label">Asunto</label>
+                            <span id="asunto-error" class="error-message"></span><br>
                         </div>
                         <div class="formcontato__input__group">
                             <textarea class="formcontato__input__field" rows="5" cols="40" id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
                             <label for="mensaje" class="formcontato__input__label">Mensaje</label>
+                            <span id="mensaje-error" class="error-message"></span><br>
                         </div>
-                        <button type="submit" class="formcontato__boton">Enviar mensaje</button>
+                        <button id="submit-btn" type="submit" class="formcontato__boton">Enviar mensaje</button>
                     </form>
                 </div>
             </div>
